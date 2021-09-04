@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -27,6 +27,7 @@ RUN set -ex; \
         net-tools \
         curl \
         git \
+	python3.6
 	    wget \
         libtasn1-3-bin \
         libglu1-mesa \
