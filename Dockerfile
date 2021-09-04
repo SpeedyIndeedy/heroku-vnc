@@ -27,7 +27,7 @@ RUN set -ex; \
         net-tools \
         curl \
         git \
-	python3.6
+	python3.6 \
 	    wget \
         libtasn1-3-bin \
         libglu1-mesa \
