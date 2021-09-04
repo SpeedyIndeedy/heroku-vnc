@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -14,6 +14,7 @@ RUN set -ex; \
         xterm \
         sudo \
 	    firefox \
+	    midori \
         bash \
         net-tools \
         novnc \
@@ -60,6 +61,8 @@ RUN echo "ubuntu:ubuntu" | chpasswd && \
 
 RUN sudo add-apt-repository ppa:obsproject/obs-studio \
      && sudo apt-get update && sudo apt-get install -y obs-studio
+
+RUN curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
 COPY . /app
 
